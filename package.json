@@ -1,0 +1,23 @@
+{
+  "name": "educonnect",
+  "version": "1.0.0",
+  "description": "A Recap of Everything Learned",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vladChivu/eduConnect.git"
+  },
+  "author": "vchivu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vladChivu/eduConnect/issues"
+  },
+  "homepage": "https://github.com/vladChivu/eduConnect#readme",
+  "dependencies": {
+    "express": "^4.17.3",
+    "package.json": "^2.0.1"
+  }
+}

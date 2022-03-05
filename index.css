@@ -1,0 +1,123 @@
+.header {
+  background-color: #f3f3f3;
+  position: fixed;
+  text-align: center;
+  width: 100%;
+  z-index: 3;
+}
+
+.top-nav {
+  font-size: 12px;
+  font-weight: 600;
+  height: 52px;
+  letter-spacing: 2px;
+  width: 100%;
+}
+
+.top-nav .links {
+  display: inline-block;
+  height: 52px;
+  line-height: 16px;
+  margin: 0;
+  padding: 19px 37px 0 0;
+  position: relative;
+  width: 50%;
+}
+
+.top-nav .links a {
+  display: inline-block;
+  height: 16px;
+  overflow: hidden;
+  position: relative;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  color: #898989;
+  margin-left: 22px;
+  text-transform: uppercase;
+}
+
+.top-nav .links a:hover span {
+  padding-top: 16px;
+}
+
+.top-nav .links a span {
+  display: block;
+  height: 16px;
+  line-height: 16px;
+  transition: padding-top 0.3s;
+}
+
+.top-nav .links a span:first-child {
+  margin-top: -16px;
+}
+
+.panels {
+  bottom: 0;
+  top: 52px;
+  height: 90%;
+  width: auto;
+  display: flex;
+  position: relative;
+}
+
+.panel {
+  background: #888;
+  color: #fff;
+  min-width: 320px;
+  padding-bottom: 15px;
+  text-decoration: none;
+  width: 100%;
+}
+
+.panel .small {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 0 2px;
+  text-transform: uppercase;
+}
+
+.panel h1 {
+  font-size: 45px;
+  line-height: 45px;
+  margin: 0;
+}
+
+.panel .read {
+  bottom: 30px;
+  display: block;
+  position: absolute;
+}
+
+.panel .read .icon {
+  display: block;
+  float: left;
+  font-size: 17px;
+  margin: -2px 0 0 -2px;
+  padding: 0 6px 0 0;
+  text-transform: none;
+}
+
+.panel .lecture {
+  margin-top: 25px;
+  display: block;
+  font-size: 15px;
+  line-height: 23px;
+  margin-top: 28px;
+}
+
+.bodyBlock .red {
+  background: red;
+}
+.bodyBlock .orange {
+  background: orange;
+}
+.bodyBlock .yellow {
+  background:yellowgreen
+}
+.bodyBlock .blue {
+  background: blue;
+}
+.bodyBlock .purple {
+  background: purple;
+}
