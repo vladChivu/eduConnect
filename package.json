@@ -2,9 +2,8 @@
   "name": "educonnect",
   "version": "1.0.0",
   "description": "A Recap of Everything Learned",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start-dev": "cross-env PORT=3000 nodemon app.js"
   },
   "repository": {
     "type": "git",
@@ -12,11 +11,9 @@
   },
   "author": "vchivu",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/vladChivu/eduConnect/issues"
-  },
   "homepage": "https://github.com/vladChivu/eduConnect#readme",
   "dependencies": {
+    "cross-env": "^7.0.3",
     "express": "^4.17.3",
     "package.json": "^2.0.1"
   }
