@@ -10,11 +10,11 @@
         &#160&#160
         <a href="#hoisting">Hoisting</a>
         &#160&#160
-        <a href="#cleancode">Clean Code</a> 
-        &#160&#160
-        <a href="#functiontypes">Types of functions</a>
-        &#160&#160
         <a href="#goodpractice">Good Practice</a>  
+        &#160&#160
+        <a href="#functiontypes">Functions</a>
+        &#160&#160
+        <a href="#cleancode">Clean Code</a> 
     </div>
 </div>
 <hr>
@@ -70,7 +70,7 @@
     <div class="col-md-4">
         <div class="content-section">
             <h3>Examples</h3>
-            <p>
+            <p class="code-section">
                 let foo = 42;
                 <br>
                 // foo is now a number
@@ -106,7 +106,7 @@
     <div class="col-md-4">
         <div class="content-section">
             <h3>Examples</h3>
-            <p>
+            <p class="code-section">
                 const price1 = 5;
                 <br>
                 const price2 = 6;
@@ -143,7 +143,7 @@
     <div class="col-md-4">
         <div class="content-section">
             <h3>Examples</h3>
-            <p>
+            <p class="code-section">
                 let carName = "Volvo";
                 <br>
                 // code here can use carName
@@ -153,7 +153,9 @@
                     &#160&#160&#160 // code here can also use carName
                     <br>
                 }
-                <hr>
+            </p>
+            <hr>
+            <p class="code-section">
                 // code here can NOT use carName
                 <br>
                 function myFunction() {
@@ -165,7 +167,6 @@
                 }
                 <br>
                 // code here can NOT use carName
-
             </p>
         </div>
     </div>
@@ -201,10 +202,10 @@
     <div class="col-md-6">
         <div class="content-section">
             <h3>Examples</h3>
-            <p>
-                <hr>
-                <b>Function hoisting</b>
-                <hr>
+            <hr>
+            <b>Function hoisting</b>
+            <hr>
+            <p class="code-section">
                 catName("Tiger");
                 <br>
                 function catName(name) {
@@ -214,7 +215,9 @@
                 }
                 <br>
                 // The result of the code above is: "My cat's name is Tiger"
-                <hr>
+            </p>
+            <hr>
+            <p class="code-section">
                 function catName(name) {
                 <br>
                 &#160&#160&#160 console.log("My cat's name is " + name);
@@ -224,9 +227,11 @@
                 catName("Tiger");
                 <br>
                 // The result of the code above is: "My cat's name is Tiger"
-                <hr>
-                <b>Variable hoisting</b>
-                <hr>
+            </p>
+            <hr>
+            <b>Variable hoisting</b>
+            <hr>
+            <p class="code-section">
                 console.log(num);
                 <br> 
                 // Returns 'undefined' from hoisted var declaration
@@ -238,26 +243,149 @@
                 console.log(num);
                 <br> 
                 // Returns 6 after the line with initialization is executed.
-                <hr>
+            </p>
+            <hr>
+            <p class="code-section">
                 console.log(num);
                 <br>  
                 // Throws ReferenceError exception, the interpreter doesn't know about `num`.
                 <br> 
                 num = 6; // Initialization
-                <hr>
+            </p>
+            <hr>
+            <p class="code-section">
                 a = 'Cran'; // Initialize a
                 <br>
                 b = 'berry'; // Initialize b
                 <br>
                 console.log(a + "" + b); // 'Cranberry'
-                <hr>
-                <b>let</b> and <b>const</b> hoisting
-                <hr> 
+            </p>
+            <hr>
+            <b>let</b> and <b>const</b> hoisting
+            <hr>
+            <p class="code-section"> 
                 console.log(num);
                 <br>  
                 // Throws ReferenceError exception as the variable value is uninitialized
                 <br> 
                 let num = 6; // Initialization
+            </p>
+        </div>
+    </div>
+</div>
+
+<!--GOOD PRACTICE----------------------------------------------------------------------------->
+<div id="goodpractice" class="row">
+    <div class="col-md-6">
+        <article class="media content-section">
+            <div class="media-body">
+                <div class="article-metadata">
+                    <a class="mr-2" href="#">Good Practice</a>
+                    <small class="text-muted"></small>
+                </div>
+                <p class="article-content">
+                    Why immutability and a functional approach to loops are preferred and will always choose the correct one?
+                    In JavaScript, only objects and arrays are mutable, not primitive values. You can make a variable name point to a new value, but the previous value is still held in memory.
+                    Immutability increases predictability, performance and allows for mutation tracking.
+                    <ul>
+                        <li>
+                            <b>Predictability</b>
+                            <br>
+                            Mutation hides change, which create (unexpected) side effects, which can cause nasty bugs. When you enforce immutability you can keep your application architecture and mental model simple, which makes it easier to reason about your application.
+                        </li>
+                        <li>
+                            <b>Performance</b>
+                            <br>
+                            Even though adding values to an immutable Object means that a new instance needs to be created where existing values need to be copied and new values need to be added to the new Object which cost memory, immutable Objects can make use of structural sharing to reduce memory overhead.
+                        </li>
+                        <li>
+                            <b>Mutation Tracking</b>
+                            <br>
+                            Besides reduced memory usage, immutability allows you to optimize your application by making use of reference and value equality. This makes it really easy to see if anything has changed.
+                        </li>
+                    </ul>
+                    <br>
+                    Alternatives to loops
+                    <ul>
+                        <li>
+                            <b>map</b>
+                            <br>
+                            Map is one of the most widely used Array methods because it is extremely versatile, powerful, and doesn't alter the original Array.
+                            Map is a higher order function that takes the element as its first argument, and then returns a new array with the results of the function we passed.
+                        </li>
+                    </ul>
+                </p>
+            </div>
+        </article>
+    </div>
+    <div class="col-md-6">
+        <div class="content-section">
+            <h3>Examples</h3>
+            <p class="code-section">
+                const items = [
+                <br>
+                    &#160&#160&#160 { name: 'chainsword', price: 20, stock: 5 },
+                    <br>
+                    &#160&#160&#160 { name: 'bolter', price: 15, stock: 10 },
+                    <br>
+                    &#160&#160&#160 { name: 'chainaxe', price: 20, stock: 2 },
+                    <br>
+                    &#160&#160&#160 { name: 'plasma pistol', price: 25, stock: 7 },
+                    <br>
+                    &#160&#160&#160 { name: 'heavy bolter', price: 30, stock: 3 },
+                <br>
+                ];
+                <br>
+                const vat = 1.2; 
+                <br>
+                const itemsWithVat = items.map(item => ({ ...item, price: item.price * vat }));
+                <br>
+                /*[
+                    <br>
+                    &#160&#160&#160 { name: 'chainsword', price: 24, stock: 5 },
+                    <br>
+                    &#160&#160&#160 { name: 'bolter', price: 18, stock: 10 },
+                    <br>
+                    &#160&#160&#160 { name: 'chainaxe', price: 24, stock: 2 },
+                    <br>
+                    &#160&#160&#160 { name: 'plasma pistol', price: 30, stock: 7 },
+                    <br>
+                    &#160&#160&#160 { name: 'heavy bolter', price: 36, stock: 3 }
+                    <br>
+                ]*/
+            </p>
+            ***In this case we used the spread operator to return the full object plus the new price property value after our VAT calculation. If we just wanted an array of the prices with VAT we would just run:
+            <br>
+            <p class="code-section">
+                const pricesWithVat = items.map(item => item.price * vat);
+                <br>
+                // [ 24, 18, 24, 30, 36 ]
+            </p>
+        </div>
+    </div>
+</div>
+
+<!--TYPES OF FUNCTIONS----------------------------------------------------------------------------->
+<div id="functiontypes" class="row">
+    <div class="col-md-8">
+        <article class="media content-section">
+            <div class="media-body">
+                <div class="article-metadata">
+                    <a class="mr-2" href="#">Functions</a>
+                    <small class="text-muted"></small>
+                </div>
+                <p class="article-content">
+                
+                </p>
+            </div>
+        </article>
+    </div>
+    <div class="col-md-4">
+        <div class="content-section">
+            <h3>Examples</h3>
+            <p class="code-section">
+                <br>
+                <hr>
             </p>
         </div>
     </div>
@@ -281,59 +409,7 @@
     <div class="col-md-4">
         <div class="content-section">
             <h3>Examples</h3>
-            <p>
-                <br>
-                <hr>
-            </p>
-        </div>
-    </div>
-</div>
-
-<!--TYPES OF FUNCTIONS----------------------------------------------------------------------------->
-<div id="functiontypes" class="row">
-    <div class="col-md-8">
-        <article class="media content-section">
-            <div class="media-body">
-                <div class="article-metadata">
-                    <a class="mr-2" href="#">Function Types</a>
-                    <small class="text-muted"></small>
-                </div>
-                <p class="article-content">
-                
-                </p>
-            </div>
-        </article>
-    </div>
-    <div class="col-md-4">
-        <div class="content-section">
-            <h3>Examples</h3>
-            <p>
-                <br>
-                <hr>
-            </p>
-        </div>
-    </div>
-</div>
-
-<!--Good Practice----------------------------------------------------------------------------->
-<div id="goodpractice" class="row">
-    <div class="col-md-8">
-        <article class="media content-section">
-            <div class="media-body">
-                <div class="article-metadata">
-                    <a class="mr-2" href="#">Good Practice</a>
-                    <small class="text-muted"></small>
-                </div>
-                <p class="article-content">
-                
-                </p>
-            </div>
-        </article>
-    </div>
-    <div class="col-md-4">
-        <div class="content-section">
-            <h3>Examples</h3>
-            <p>
+            <p class="code-section">
                 <br>
                 <hr>
             </p>
