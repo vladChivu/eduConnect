@@ -1,22 +1,68 @@
+<h3>TOPICS</h3>
+<hr>
 <div class="row">
+    <div class="col-md-8">
+        <a href="#datatypes">Data Types</a>
+        &#160&#160
+        <a href="#datatypes">Variables</a>
+        &#160&#160
+        <a href="#scope">Scope</a>
+        &#160&#160
+        <a href="#hoisting">Hoisting</a>
+        &#160&#160
+        <a href="#cleancode">Clean Code</a> 
+        &#160&#160
+        <a href="#functiontypes">Types of functions</a>
+        &#160&#160
+        <a href="#goodpractice">Good Practice</a>  
+    </div>
+</div>
+<hr>
+
+<!--DATA TYPES----------------------------------------------------------------------------->
+<div id="datatypes" class="row">
     <div class="col-md-8">
         <article class="media content-section">
             <div class="media-body">
                 <div class="article-metadata">
-                    <a class="mr-2" href="#">Topic</a>
+                    <a class="mr-2" href="#">Data types & Data structures</a>
+                    <small class="text-muted">Source: https://developer.mozilla.org</small>
                 </div>
-                <h3><a class="article-title" href="#">smth</a></h3>
                 <p class="article-content">
-                    content
-                    content
-                    content
-                    content
-                    content
-                    content
-                    content
-                    content
-                    content
-                    content
+                    Programming languages all have built-in data structures, but these often differ from one language to another. 
+                    JavaScript is a loosely typed and dynamic language. Variables in JavaScript are not directly associated with any particular value type, and any variable can be assigned (and re-assigned) values of all types.
+                    The set of types in the JavaScript language consists of primitive values and objects.
+                    - Primitive values (represented directly at the lowest level of the language)
+                    <ul>
+                        <li>
+                            Boolean type
+                        </li>
+                        <li>
+                            Null type
+                        </li>
+                        <li>
+                            Undefined type
+                        </li>
+                        <li>
+                            Number type
+                        </li>
+                        <li>
+                            BigInt type
+                        </li>
+                        <li>
+                            String type
+                        </li>
+                        <li>
+                            Symbol type
+                        </li>
+                    </ul>
+                    - Objects (collections of properties)
+                    <br>
+                    <br>
+                    * Strings
+                    Unlike some programming languages (such as C), JavaScript strings are immutable. This means that once a string is created, it is not possible to modify it.
+                    However, it is still possible to create another string based on an operation on the original string. For example:
+                    A concatenation of two strings using the concatenation operator (+) or String.concat().
                 </p>
             </div>
         </article>
@@ -25,35 +71,34 @@
         <div class="content-section">
             <h3>Examples</h3>
             <p>
-                content
-                content
-                content
-                content
-                content
+                let foo = 42;
+                <br>
+                // foo is now a number
+                <br>
+                foo = 'bar';
+                <br> 
+                // foo is now a string
+                <br>
+                foo = true;
+                <br>  
+                // foo is now a boolean
             </p>
         </div>
     </div>
 </div>
 
-<div class="row">
+<!--VARIABLES----------------------------------------------------------------------------->
+<div id="variables" class="row">
     <div class="col-md-8">
         <article class="media content-section">
             <div class="media-body">
                 <div class="article-metadata">
-                    <a class="mr-2" href="#">Topic</a>
+                    <a class="mr-2" href="#">Variables</a>
+                    <small class="text-muted">Source: https://w3schools.com</small>
                 </div>
-                <h3><a class="article-title" href="#">smth</a></h3>
                 <p class="article-content">
-                    content
-                    content
-                    content
-                    content
-                    content
-                    content
-                    content
-                    content
-                    content
-                    content
+                    <b>const</b> is a signal that the identifier won't be reassigned. 
+                    <b>let</b> is a signal that the variable may be reassigned, such as a counter in a loop, or a value swap in an algorithm. It also signals that the variable will be used only in the block it's defined in, which is not always the entire containing function.
                 </p>
             </div>
         </article>
@@ -62,11 +107,235 @@
         <div class="content-section">
             <h3>Examples</h3>
             <p>
-                content
-                content
-                content
-                content
-                content
+                const price1 = 5;
+                <br>
+                const price2 = 6;
+                <br>
+                let total = price1 + price2;
+            </p>
+        </div>
+    </div>
+</div>
+
+<!--SCOPE----------------------------------------------------------------------------->
+<div id="scope" class="row">
+    <div class="col-md-8">
+        <article class="media content-section">
+            <div class="media-body">
+                <div class="article-metadata">
+                    <a class="mr-2" href="#">Scope</a>
+                    <small class="text-muted">Source: https://digitalocean.com</small>
+                </div>
+                <p class="article-content">
+                    Scope in JavaScript refers to the current context of code, which determines the accessibility of variables to JavaScript. The two types of scope are local and global: 
+                    <b>Global</b> variables are those declared outside of a block & can be accessed from anywhere in a JavaScript program.
+                    <b>Local</b> variables are those declared inside of a block & can be accessed only within that block of code.
+                    <b>!IMPORTANT</b>
+                    <ul>
+                        <li>Variables declared with the var keyword can NOT have block scope.</li>
+                        <li>All modern browsers support running JavaScript in "Strict Mode". In "Strict Mode", undeclared variables are not automatically global.</li>
+                        <li>Do NOT create global variables unless you intend to. Your global variables (or functions) can overwrite window variables (or functions)</li>
+                    </ul>
+                </p>
+            </div>
+        </article>
+    </div>
+    <div class="col-md-4">
+        <div class="content-section">
+            <h3>Examples</h3>
+            <p>
+                let carName = "Volvo";
+                <br>
+                // code here can use carName
+                <br>
+                function myFunction() {
+                    <br>
+                    &#160&#160&#160 // code here can also use carName
+                    <br>
+                }
+                <hr>
+                // code here can NOT use carName
+                <br>
+                function myFunction() {
+                    <br>
+                    &#160&#160&#160 let carName = "Volvo";
+                    <br>
+                    &#160&#160&#160 // code here CAN use carName
+                    <br>
+                }
+                <br>
+                // code here can NOT use carName
+
+            </p>
+        </div>
+    </div>
+</div>
+
+<!--HOISTING----------------------------------------------------------------------------->
+<div id="hoisting" class="row">
+    <div class="col-md-6">
+        <article class="media content-section">
+            <div class="media-body">
+                <div class="article-metadata">
+                    <a class="mr-2" href="#">Hoisting</a>
+                    <small class="text-muted">Source: https://developer.mozilla.org</small>
+                </div>
+                <p class="article-content">
+                    hoisting means to raise something by means of ropes and pulleys
+                    <br>
+                    JavaScript Declarations are Hoisted, which means that JavaScript has default behavior of moving declarations to the top prior to execution of the code.
+                    <br>
+                    One of the advantages of hoisting is that it lets you use a function before you declare it in your code.
+                    <br>
+                    However JavaScript only hoists declarations, not initializations! This means that initialization doesn't happen until the associated line of code is executed, even if the variable was originally initialized then declared, or declared and initialized in the same line. Until that point in the execution is reached the variable has its default initialization (undefined for a variable declared using var, otherwise uninitialized).
+                    <br>
+                    If we forget the declaration altogether (and only initialize the value) the variable isn't hoisted. Trying to read the variable before it is initialized results in ReferenceError exception.
+                    <br>
+                    Note however that initialization also causes declaration if not already declared.
+                    <br>
+                    Variables declared with let and const are also hoisted but, unlike var, are not initialized with a default value. The block of code is aware of the variable, but it cannot be used until it has been declared. An exception will be thrown if a variable declared with let or const is read before it is initialized.
+                </p>
+            </div>
+        </article>
+    </div>
+    <div class="col-md-6">
+        <div class="content-section">
+            <h3>Examples</h3>
+            <p>
+                <hr>
+                <b>Function hoisting</b>
+                <hr>
+                catName("Tiger");
+                <br>
+                function catName(name) {
+                <br>
+                &#160&#160&#160 console.log("My cat's name is " + name);
+                <br>
+                }
+                <br>
+                // The result of the code above is: "My cat's name is Tiger"
+                <hr>
+                function catName(name) {
+                <br>
+                &#160&#160&#160 console.log("My cat's name is " + name);
+                <br>
+                }
+                <br>
+                catName("Tiger");
+                <br>
+                // The result of the code above is: "My cat's name is Tiger"
+                <hr>
+                <b>Variable hoisting</b>
+                <hr>
+                console.log(num);
+                <br> 
+                // Returns 'undefined' from hoisted var declaration
+                <br>
+                var num; // Declaration
+                <br>
+                num = 6; // Initialization
+                <br>
+                console.log(num);
+                <br> 
+                // Returns 6 after the line with initialization is executed.
+                <hr>
+                console.log(num);
+                <br>  
+                // Throws ReferenceError exception, the interpreter doesn't know about `num`.
+                <br> 
+                num = 6; // Initialization
+                <hr>
+                a = 'Cran'; // Initialize a
+                <br>
+                b = 'berry'; // Initialize b
+                <br>
+                console.log(a + "" + b); // 'Cranberry'
+                <hr>
+                <b>let</b> and <b>const</b> hoisting
+                <hr> 
+                console.log(num);
+                <br>  
+                // Throws ReferenceError exception as the variable value is uninitialized
+                <br> 
+                let num = 6; // Initialization
+            </p>
+        </div>
+    </div>
+</div>
+
+<!--CLEAN CODE----------------------------------------------------------------------------->
+<div id="cleancode" class="row">
+    <div class="col-md-8">
+        <article class="media content-section">
+            <div class="media-body">
+                <div class="article-metadata">
+                    <a class="mr-2" href="#">Clean Code</a>
+                    <small class="text-muted"></small>
+                </div>
+                <p class="article-content">
+                
+                </p>
+            </div>
+        </article>
+    </div>
+    <div class="col-md-4">
+        <div class="content-section">
+            <h3>Examples</h3>
+            <p>
+                <br>
+                <hr>
+            </p>
+        </div>
+    </div>
+</div>
+
+<!--TYPES OF FUNCTIONS----------------------------------------------------------------------------->
+<div id="functiontypes" class="row">
+    <div class="col-md-8">
+        <article class="media content-section">
+            <div class="media-body">
+                <div class="article-metadata">
+                    <a class="mr-2" href="#">Function Types</a>
+                    <small class="text-muted"></small>
+                </div>
+                <p class="article-content">
+                
+                </p>
+            </div>
+        </article>
+    </div>
+    <div class="col-md-4">
+        <div class="content-section">
+            <h3>Examples</h3>
+            <p>
+                <br>
+                <hr>
+            </p>
+        </div>
+    </div>
+</div>
+
+<!--Good Practice----------------------------------------------------------------------------->
+<div id="goodpractice" class="row">
+    <div class="col-md-8">
+        <article class="media content-section">
+            <div class="media-body">
+                <div class="article-metadata">
+                    <a class="mr-2" href="#">Good Practice</a>
+                    <small class="text-muted"></small>
+                </div>
+                <p class="article-content">
+                
+                </p>
+            </div>
+        </article>
+    </div>
+    <div class="col-md-4">
+        <div class="content-section">
+            <h3>Examples</h3>
+            <p>
+                <br>
+                <hr>
             </p>
         </div>
     </div>
