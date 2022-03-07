@@ -29,61 +29,47 @@
                     <small class="text-muted">Source: https://developer.mozilla.org</small>
                 </div>
                 <p class="article-content">
-                    Programming languages all have built-in data structures, but these often differ from one language to another. 
-                    JavaScript is a loosely typed and dynamic language. Variables in JavaScript are not directly associated with any particular value type, and any variable can be assigned (and re-assigned) values of all types.
-                    The set of types in the JavaScript language consists of primitive values and objects.
-                    - Primitive values (represented directly at the lowest level of the language)
-                    <ul>
-                        <li>
-                            Boolean type
-                        </li>
-                        <li>
-                            Null type
-                        </li>
-                        <li>
-                            Undefined type
-                        </li>
-                        <li>
-                            Number type
-                        </li>
-                        <li>
-                            BigInt type
-                        </li>
-                        <li>
-                            String type
-                        </li>
-                        <li>
-                            Symbol type
-                        </li>
-                    </ul>
-                    - Objects (collections of properties)
+                    Programming languages have built-in data structures, but these often differ from one language to another. 
+                </p>
+                <p>
+                    The set of types in the JavaScript language consists of primitive values and objects:
+                    <ol>
+                        <li>Primitive values (represented directly at the lowest level of the language)</li>
+                        <ul>
+                            <li>
+                                Boolean type
+                            </li>
+                            <li>
+                                Null type
+                            </li>
+                            <li>
+                                Undefined type
+                            </li>
+                            <li>
+                                Number type
+                            </li>
+                            <li>
+                                BigInt type
+                            </li>
+                            <li>
+                                String type
+                            </li>
+                            <li>
+                                Symbol type
+                            </li>
+                        </ul>
+                        <li>Objects (collections of properties)</li>
+                    </ol>
+                </p>
+                <p>
+                    **<b>Strings</b>
                     <br>
-                    <br>
-                    * Strings
                     Unlike some programming languages (such as C), JavaScript strings are immutable. This means that once a string is created, it is not possible to modify it.
                     However, it is still possible to create another string based on an operation on the original string. For example:
                     A concatenation of two strings using the concatenation operator (+) or String.concat().
                 </p>
             </div>
         </article>
-    </div>
-    <div class="col-md-4">
-        <div class="content-section">
-            <h3>Examples</h3>
-            <p class="code-section">
-                let foo = 42;
-                <br>
-                // foo is now a number
-                <br>
-                foo = 'bar';
-                <br> 
-                // foo is now a string
-                <br>
-                foo = true;
-                <br>  
-                // foo is now a boolean
-            </p>
-        </div>
     </div>
 </div>
 
@@ -97,7 +83,12 @@
                     <small class="text-muted">Source: https://w3schools.com</small>
                 </div>
                 <p class="article-content">
-                    <b>const</b> is a signal that the identifier won't be reassigned. 
+                    JavaScript is a loosely typed and dynamic language. Variables in JavaScript are not directly associated with any particular value type, and any variable can be assigned (and re-assigned) values of all types.
+                </p>
+                <p>
+                    <b>const</b> is a signal that the identifier won't be reassigned.
+                </p>
+                <p> 
                     <b>let</b> is a signal that the variable may be reassigned, such as a counter in a loop, or a value swap in an algorithm. It also signals that the variable will be used only in the block it's defined in, which is not always the entire containing function.
                 </p>
             </div>
@@ -106,6 +97,21 @@
     <div class="col-md-4">
         <div class="content-section">
             <h3>Examples</h3>
+            <hr>
+            <p class="code-section">
+                let foo = 42;
+                <br>
+                // foo is now a number
+                <br>
+                foo = 'bar';
+                <br> 
+                // foo is now a string
+                <br>
+                foo = true;
+                <br>  
+                // foo is now a boolean
+            </p>
+            <hr>
             <p class="code-section">
                 const price1 = 5;
                 <br>
@@ -127,14 +133,20 @@
                     <small class="text-muted">Source: https://digitalocean.com</small>
                 </div>
                 <p class="article-content">
-                    Scope in JavaScript refers to the current context of code, which determines the accessibility of variables to JavaScript. The two types of scope are local and global: 
+                    <b>Scope</b> in JavaScript refers to the current context of code, which determines the accessibility of variables to JavaScript. The two types of scope are local and global: 
+                </p>
+                <p>
                     <b>Global</b> variables are those declared outside of a block & can be accessed from anywhere in a JavaScript program.
+                </p>
+                <p>
                     <b>Local</b> variables are those declared inside of a block & can be accessed only within that block of code.
+                </p>
+                <p>
                     <b>!IMPORTANT</b>
                     <ul>
                         <li>Variables declared with the var keyword can NOT have block scope.</li>
                         <li>All modern browsers support running JavaScript in "Strict Mode". In "Strict Mode", undeclared variables are not automatically global.</li>
-                        <li>Do NOT create global variables unless you intend to. Your global variables (or functions) can overwrite window variables (or functions)</li>
+                        <li>Do NOT create global variables unless you intend to. Your global variables (or functions) can overwrite window variables (or functions).</li>
                     </ul>
                 </p>
             </div>
@@ -143,6 +155,7 @@
     <div class="col-md-4">
         <div class="content-section">
             <h3>Examples</h3>
+            <hr>
             <p class="code-section">
                 let carName = "Volvo";
                 <br>
@@ -182,18 +195,24 @@
                     <small class="text-muted">Source: https://developer.mozilla.org</small>
                 </div>
                 <p class="article-content">
-                    hoisting means to raise something by means of ropes and pulleys
-                    <br>
-                    JavaScript Declarations are Hoisted, which means that JavaScript has default behavior of moving declarations to the top prior to execution of the code.
-                    <br>
+                    <b>hoisting</b> means to raise something by means of ropes and pulleys
+                </p>
+                <p>
+                    JavaScript declarations are hoisted, which means that JavaScript has default behavior of moving declarations to the top prior to execution of the code.
+                </p>
+                <p>
                     One of the advantages of hoisting is that it lets you use a function before you declare it in your code.
-                    <br>
-                    However JavaScript only hoists declarations, not initializations! This means that initialization doesn't happen until the associated line of code is executed, even if the variable was originally initialized then declared, or declared and initialized in the same line. Until that point in the execution is reached the variable has its default initialization (undefined for a variable declared using var, otherwise uninitialized).
-                    <br>
+                </p>
+                <p>
+                    However JavaScript only hoists declarations, not initializations!
+                    <br> 
+                    This means that initialization doesn't happen until the associated line of code is executed, even if the variable was originally initialized then declared, or declared and initialized in the same line. Until that point in the execution is reached the variable has its default initialization (undefined for a variable declared using var, otherwise uninitialized). 
+                </p>
+                <p>
                     If we forget the declaration altogether (and only initialize the value) the variable isn't hoisted. Trying to read the variable before it is initialized results in ReferenceError exception.
-                    <br>
-                    Note however that initialization also causes declaration if not already declared.
-                    <br>
+                    Note however that variables initialization also causes declaration if not already declared.
+                </p>
+                <p>
                     Variables declared with let and const are also hoisted but, unlike var, are not initialized with a default value. The block of code is aware of the variable, but it cannot be used until it has been declared. An exception will be thrown if a variable declared with let or const is read before it is initialized.
                 </p>
             </div>
@@ -281,11 +300,14 @@
             <div class="media-body">
                 <div class="article-metadata">
                     <a class="mr-2" href="#">Good Practice</a>
-                    <small class="text-muted"></small>
+                    <small class="text-muted">Source: https://stackoverflow.com</small>
                 </div>
                 <p class="article-content">
+                    In JavaScript, only objects and arrays are mutable, not primitive values. You can make a variable name point to a new value, but the previous value is still held in memory, hence the need for garbage collection.
+                </p>
+                <p>
                     Why immutability and a functional approach to loops are preferred and will always choose the correct one?
-                    In JavaScript, only objects and arrays are mutable, not primitive values. You can make a variable name point to a new value, but the previous value is still held in memory.
+                    <br>
                     Immutability increases predictability, performance and allows for mutation tracking.
                     <ul>
                         <li>
@@ -296,7 +318,7 @@
                         <li>
                             <b>Performance</b>
                             <br>
-                            Even though adding values to an immutable Object means that a new instance needs to be created where existing values need to be copied and new values need to be added to the new Object which cost memory, immutable Objects can make use of structural sharing to reduce memory overhead.
+                            Even though adding values to an immutable Object means that a new instance needs to be created where existing values need to be copied and new values need to be added to the new Object which costs memory, immutable Objects can make use of structural sharing to reduce memory overhead.
                         </li>
                         <li>
                             <b>Mutation Tracking</b>
@@ -304,8 +326,15 @@
                             Besides reduced memory usage, immutability allows you to optimize your application by making use of reference and value equality. This makes it really easy to see if anything has changed.
                         </li>
                     </ul>
-                    <br>
-                    Alternatives to loops
+                </p>
+                <p>
+                    Why don't we like for loops in Javascript:
+                    <ul>
+                        <li>overly verbose</li>
+                        <li>error prone</li>
+                        <li>not functional</li>
+                    </ul>
+                    Alternatives to loops:
                     <ul>
                         <li>
                             <b>map</b>
@@ -321,6 +350,9 @@
     <div class="col-md-6">
         <div class="content-section">
             <h3>Examples</h3>
+            <hr>
+            using <b>map</b> to iterate through an array and modify some values
+            <hr>
             <p class="code-section">
                 const items = [
                 <br>
@@ -354,8 +386,9 @@
                     <br>
                 ]*/
             </p>
-            ***In this case we used the spread operator to return the full object plus the new price property value after our VAT calculation. If we just wanted an array of the prices with VAT we would just run:
-            <br>
+            <p>
+                // In this case we used the spread operator to return the full object plus the new price property value after our VAT calculation. If we just wanted an array of the prices with VAT we would just run:
+            </p>
             <p class="code-section">
                 const pricesWithVat = items.map(item => item.price * vat);
                 <br>
@@ -365,17 +398,56 @@
     </div>
 </div>
 
-<!--TYPES OF FUNCTIONS----------------------------------------------------------------------------->
+<!--FUNCTIONS----------------------------------------------------------------------------->
 <div id="functiontypes" class="row">
     <div class="col-md-8">
         <article class="media content-section">
             <div class="media-body">
                 <div class="article-metadata">
                     <a class="mr-2" href="#">Functions</a>
-                    <small class="text-muted"></small>
+                    <small class="text-muted">Source: https://developer.mozilla.org</small>
                 </div>
                 <p class="article-content">
-                
+                    Functions are one of the fundamental building blocks in JavaScript. A function in JavaScript is similar to a procedure—a set of statements that performs a task or calculates a value.
+                </p>
+                <p>
+                    <b>Function declarations</b>
+                    <br>
+                    A function definition (also called a function declaration, or function statement) consists of the function keyword, followed by:
+                    <ul>
+                        <li>The name of the function.</li>
+                        <li>A list of parameters to the function, enclosed in parentheses and separated by commas.</li>
+                        <li>The JavaScript statements that define the function, enclosed in curly brackets, {...}.</li>
+                    </ul>
+                </p>
+                <p>
+                    <b>Function expressions</b>
+                    <br>
+                    While the function declaration above is syntactically a statement, functions can also be created by a function expression. Such a function can be anonymous; it does not have to have a name.
+                    However, a name can be provided with a function expression. Providing a name allows the function to refer to itself, and also makes it easier to identify the function in a debugger's stack traces.
+                    Function expressions are convenient when passing a function as an argument to another function.
+                    <br>
+                </p>
+                <p>
+                    <b>Calling functions</b>
+                    <br>
+                    Defining a function does not execute it. Defining it names the function and specifies what to do when the function is called. Calling the function actually performs the specified actions with the indicated parameters.
+                    Functions must be in scope when they are called, but the function declaration can be hoisted.
+                    <br>
+                    The arguments of a function are not limited to strings and numbers. You can pass whole objects to a function and a function can also call itself.
+                    <br>
+                    There are often cases where a function needs to be called dynamically, or the number of arguments to a function vary, or in which the context of the function call needs to be set to a specific object determined at runtime.
+                    <br>
+                    It turns out that functions are themselves objects—and in turn, these objects have methods. (see the Function object) 
+                </p>
+                <p>
+                    <b>Callback function</b>
+                    <br>
+                    A callback function is a function passed into another function as an argument, which is then invoked inside the outer function to complete some kind of routine or action.
+                    <br>
+                    The example to the right is a synchronous callback, as it is executed immediately.
+                    <br>
+                    Note, however, that callbacks are often used to continue code execution after an asynchronous operation has completed — these are called asynchronous callbacks. A good example is the callback functions executed inside a .then() block chained onto the end of a promise after that promise fulfills or rejects. This structure is used in many modern web APIs, such as fetch().
                 </p>
             </div>
         </article>
@@ -383,9 +455,89 @@
     <div class="col-md-4">
         <div class="content-section">
             <h3>Examples</h3>
+            <hr>
+            <b>function declaration</b>
+            <hr>
             <p class="code-section">
+                function square(number) {
+                    <br>
+                &#160&#160&#160 return number * number;
+                    <br>
+                }
+            </p>
+            <hr>
+            <b>function expression</b>
+            <hr>
+            <p class="code-section">
+                const square = function(number) {
+                    <br> 
+                &#160&#160&#160 return number * number
+                    <br>  
+                }
                 <br>
-                <hr>
+                var x = square(4) // x gets the value 16
+            </p>
+            <hr>
+            <p class="code-section">
+                const factorial = function fac(n) {
+                    <br>   
+                &#160&#160&#160 return n < 2 ? 1 : n * fac(n-1)
+                    <br>   
+                }
+                <br>  
+                console.log(factorial(3))
+            </p>
+            <hr>
+            <b>function as a parameter to another</b>
+            <hr>
+            <p class="code-section">
+                function map(f, a) {
+                    <br>
+                    &#160&#160&#160 let result = [];
+                    <br>
+                    &#160&#160&#160 let i; 
+                    <br>
+                    &#160&#160&#160 for (i = 0; i != a.length; i++)
+                        <br>    
+                        &#160&#160&#160 &#160&#160&#160 result[i] = f(a[i]);
+                        <br> 
+                        &#160&#160&#160 return result;
+                    <br>
+                }
+                  <br>
+                  const f = function(x) {
+                    <br>
+                    &#160&#160&#160 return x * x * x;
+                    <br>
+                  }
+                  <br>
+                  let numbers = [0, 1, 2, 5, 10];
+                  <br>
+                  let cube = map(f,numbers);
+                  <br>
+                  console.log(cube);
+                  <br>
+                  // returns: [0, 1, 8, 125, 1000].
+            </p>
+            <hr>
+            <b>callback function</b>
+            <hr>
+            <p class="code-section">
+                function greeting(name) {
+                <br>
+                &#160&#160&#160 alert('Hello ' + name);
+                <br>
+                }
+                <br>  
+                function processUserInput(callback) {
+                <br>    
+                &#160&#160&#160 let name = prompt('Please enter your name.');
+                <br>
+                &#160&#160&#160 callback(name);
+                <br>
+                }
+                <br>  
+                processUserInput(greeting);
             </p>
         </div>
     </div>
@@ -398,10 +550,21 @@
             <div class="media-body">
                 <div class="article-metadata">
                     <a class="mr-2" href="#">Clean Code</a>
-                    <small class="text-muted"></small>
+                    <small class="text-muted">Source: Robert C. Martin Series</small>
                 </div>
                 <p class="article-content">
-                
+                    "Even bad code can function. But if code isn't clean, it can bring a development organization to its knees. Every year, countless hours and significant resources are lost because of poorly written code." 
+                </p>
+                <p>
+                    Some rules to follow:
+                    <ul>
+                        <li>create intuitive names for variables, functions, classes</li>
+                        <li>modularize your code into logic parts</li>
+                        <li>check for redundancy</li>
+                        <li>format code for maximum readability and be consistent</li>
+                        <li>implement error handling</li>
+                        <li>practice test-driven development</li>
+                    </ul>
                 </p>
             </div>
         </article>

@@ -2,33 +2,162 @@
 <hr>
 <div class="row">
     <div class="col-md-8">
-        <a href="#express">Express</a>
+        <a href="#whatisexpress">What is Express?</a>
         &#160&#160
+        <a href="#howitworks">How does it work?</a>
+        &#160&#160
+        <a href="#whatitisusedfor">What is it used for?</a>
     </div>
 </div>
 <hr>
 
 <!--Express----------------------------------------------------------------------------->
-<div id="express" class="row">
-    <div class="col-md-8">
+<div id="whatisexpress" class="row">
+    <div class="col-md-6">
         <article class="media content-section">
             <div class="media-body">
                 <div class="article-metadata">
-                    <a class="mr-2" href="#">Express</a>
-                    <small class="text-muted"></small>
+                    <a class="mr-2" href="#">What is Express?</a>
+                    <small class="text-muted">Source: https://academind.com</small>
                 </div>
                 <p class="article-content">
-                    
+                    As developers our main focus should be business logic and not the repetitive tasks.
+                    So we use frameworks for that because even for the simplest application it will be a lot of code for just getting the path and send a response back to the client.
+                </p>
+                <p>
+                    When writing a web application things could get easily complicated, and error-prone because we have to write everything on our own (parsing URLs, creating routing actions, all of the checks, rendering, and more).
+                </p>
+                <p>
+                    Express is built upon Node.js and it offers us a lot of tools which make writing node apps more easier because it implements a lot of functionalities that will take care about that nitty-gritty stuff. It is also optimized and secure.
+                </p>
+                <p>
+                    Express allows us:
+                    <ul>
+                        <li>to quicly set up routes</li>
+                        <li>to easily render stuff</li>
+                        <li>to easily use templating engines (dynamically inject values into HTML files)</li>
+                        <li>and more...</li>
+                    </ul>
                 </p>
             </div>
         </article>
     </div>
-    <div class="col-md-4">
+    <div class="col-md-6">
         <div class="content-section">
             <h3>Examples</h3>
+            <hr>
             <p class="code-section">
+                const url = require('url');
                 <br>
-                <hr>
+                const fs = require('fs');
+                <br>
+                function renderHTML(path, response) {
+                <br>
+                &#160&#160 fs.readFile(path, null, function(error, data) {
+                <br>
+                &#160&#160 &#160&#160 if (error) {
+                <br>
+                &#160&#160 &#160&#160 &#160&#160 response.writeHead(404);
+                <br>
+                &#160&#160 &#160&#160 &#160&#160 response.write('File not found!');
+                <br>
+                &#160&#160 &#160&#160 } else {
+                <br>
+                &#160&#160 &#160&#160 &#160&#160 response.write(data);
+                <br>
+                &#160&#160 &#160&#160 }
+                <br>
+                &#160&#160 &#160&#160  response.end();
+                <br>
+                &#160&#160 });
+                <br>
+                }
+                <br>
+                module.exports = {
+                <br>
+                &#160&#160 handleRequest: function(request, response) {
+                <br>
+                &#160&#160 &#160&#160 response:writeHead(200, {'Content-Type': 
+                <br>
+                &#160&#160 &#160&#160 'text/html'});
+                <br>
+                &#160&#160 &#160&#160 const path = url.parse(request.url).pathname;
+                <br>
+                &#160&#160 &#160&#160 switch (path) {
+                <br>
+                &#160&#160 &#160&#160 &#160&#160 case '/':
+                <br>
+                &#160&#160 &#160&#160 &#160&#160 &#160&#160 renderHTML('./index.html', response);
+                <br>
+                &#160&#160 &#160&#160 &#160&#160 &#160&#160 break;
+                <br>
+                &#160&#160 &#160&#160 &#160&#160 case '/login':
+                <br>
+                &#160&#160 &#160&#160 &#160&#160 &#160&#160 renderHTML('./login.html', response)
+                <br>
+                &#160&#160 &#160&#160 &#160&#160 &#160&#160 break;
+                <br>
+                &#160&#160 &#160&#160 &#160&#160 default:
+                <br>
+                &#160&#160 &#160&#160 &#160&#160 &#160&#160 response.writeHead(404);
+                <br>
+                &#160&#160 &#160&#160 &#160&#160 &#160&#160 response.write('Route not defined');
+                <br>
+                &#160&#160 &#160&#160 &#160&#160 &#160&#160 response.end();
+                <br>
+                &#160&#160 &#160&#160 }
+                <br>
+                &#160&#160 }
+                <br>
+                };
+            </p>
+            <hr>
+            So instead of the above code we use <b>express</b> like so:
+            <hr>
+            <p class="code-section">
+                const express = require("express");
+                <br>
+                const app = express();
+                <br>
+                app.get("/welcome", (req, res) => {
+                <br>
+                &#160&#160 res.send(data);
+                <br>
+                });
+            </p>
         </div>
     </div>
 </div>
+
+<!--HOW DOES IT WORK----------------------------------------------------------------------------->
+<div id="howdoesitwork" class="row">
+    <div class="col-md-8">
+        <article class="media content-section">
+            <div class="media-body">
+                <div class="article-metadata">
+                    <a class="mr-2" href="#">How does it work?</a>
+                    <small class="text-muted"></small>
+                </div>
+                <p class="article-content">
+                </p>
+            </div>
+        </article>
+    </div>
+</div>
+
+<!--HOW IS IT USED----------------------------------------------------------------------------->
+<div id="whatitisusedfor" class="row">
+    <div class="col-md-8">
+        <article class="media content-section">
+            <div class="media-body">
+                <div class="article-metadata">
+                    <a class="mr-2" href="#">What is it used for?</a>
+                    <small class="text-muted"></small>
+                </div>
+                <p class="article-content">
+                </p>
+            </div>
+        </article>
+    </div>
+</div>
+

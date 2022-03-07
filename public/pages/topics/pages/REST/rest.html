@@ -2,33 +2,105 @@
 <hr>
 <div class="row">
     <div class="col-md-8">
-        <a href="#rest">REST</a>
+        <a href="#rest">What is REST?</a>
         &#160&#160
+        <a href="#principles">REST Principles</a>
     </div>
 </div>
 <hr>
 
-<!--REST----------------------------------------------------------------------------->
+<!--WHAT IS REST----------------------------------------------------------------------------->
 <div id="rest" class="row">
-    <div class="col-md-8">
+    <div class="col-md-6">
         <article class="media content-section">
             <div class="media-body">
                 <div class="article-metadata">
-                    <a class="mr-2" href="#">REST</a>
-                    <small class="text-muted"></small>
+                    <a class="mr-2" href="#">What is REST?</a>
+                    <small class="text-muted">Source: https://restfulapi.net/</small>
                 </div>
                 <p class="article-content">
-                    
+                    <b>REST</b> is an acronym for Representational State Transfer and an architectural style for distributed hypermedia systems. Roy Fielding first presented it in 2000 in his famous dissertation.
+                    Like other architectural styles, REST has its guiding principles and constraints. These principles must be satisfied if a service interface needs to be referred to as RESTful.
+                    A Web API (or Web Service) conforming to the REST architectural style is a REST API.
                 </p>
             </div>
         </article>
     </div>
-    <div class="col-md-4">
+    <div class="col-md-6">
         <div class="content-section">
             <h3>Examples</h3>
             <p class="code-section">
-                <br>
-                <hr>
+                <img src="/pages/topics/images/httpDesign.JPG" alt="http design">
+            </p>
         </div>
+    </div>
+</div>
+
+<!--REST PRINCIPLES----------------------------------------------------------------------------->
+<div id="principles" class="row">
+    <div class="col-md-8">
+        <article class="media content-section">
+            <div class="media-body">
+                <div class="article-metadata">
+                    <a class="mr-2" href="#">REST Principles</a>
+                    <small class="text-muted">Source: https://restfulapi.net/</small>
+                </div>
+                <p class="article-content">
+                    The six guiding principles or constraints of the RESTful architecture are:
+                    <ol>
+                        <li>
+                            <b>Uniform Interface</b>
+                            <br>
+                            The following four constraints can achieve a uniform REST interface:
+                            <ul>
+                                <li>Identification of resources: The interface must uniquely identify each resource involved in the interaction between the client and the server.</li>
+                                <li>Manipulation of resources through representations: The resources should have uniform representations in the server response. API consumers should use these representations to modify the resources state in the server.</li>
+                                <li>Self-descriptive messages: Each resource representation should carry enough information to describe how to process the message. It should also provide information of the additional actions that the client can perform on the resource.</li>
+                                <li>Hypermedia as the engine of application state: The client should have only the initial URI of the application. The client application should dynamically drive all other resources and interactions with the use of hyperlinks.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <b>Client-server</b>
+                            <br>
+                            The client-server design pattern enforces the separation of concerns, which helps the client and the server components evolve independently.
+                            <br>
+                            By separating the user interface concerns (client) from the data storage concerns (server), we improve the portability of the user interface across multiple platforms and improve scalability by simplifying the server components.
+                            <br>
+                            While the client and the server evolve, we have to make sure that the interface/contract between the client and the server does not break.
+                        </li>
+                        <li>
+                            <b>Stateless</b>
+                            <br>
+                            Statelessness mandates that each request from the client to the server must contain all of the information necessary to understand and complete the request.
+                            <br>
+                            The server cannot take advantage of any previously stored context information on the server.
+                            <br>
+                            For this reason, the client application must entirely keep the session state.
+                        </li>
+                        <li>
+                            <b>Cacheable</b>
+                            <br>
+                            The cacheable constraint requires that a response should implicitly or explicitly label itself as cacheable or non-cacheable.
+                            <br>
+                            If the response is cacheable, the client application gets the right to reuse the response data later for equivalent requests and a specified period.
+                        </li>
+                        <li>
+                            <b>Layered system</b>
+                            <br>
+                            The layered system style allows an architecture to be composed of hierarchical layers by constraining component behavior.
+                            <br>
+                            For example, in a layered system, each component cannot see beyond the immediate layer they are interacting with.
+                        </li>
+                        <li>
+                            <b>Code on demand (optional)</b>
+                            <br>
+                            REST also allows client functionality to extend by downloading and executing code in the form of applets or scripts.
+                            <br>
+                            The downloaded code simplifies clients by reducing the number of features required to be pre-implemented. Servers can provide part of features delivered to the client in the form of code, and the client only needs to execute the code.
+                        </li>
+                    </ol>
+                </p>
+            </div>
+        </article>
     </div>
 </div>

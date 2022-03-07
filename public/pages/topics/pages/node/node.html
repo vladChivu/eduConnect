@@ -2,33 +2,89 @@
 <hr>
 <div class="row">
     <div class="col-md-8">
-        <a href="#node">Node</a>
+        <a href="#whatisnode">What is Node.js?</a>
         &#160&#160
+        <a href="#howitworks">How does it work?</a>
+        &#160&#160
+        <a href="#whatitisusedfor">What is it used for?</a>
     </div>
 </div>
 <hr>
 
-<!--NODE----------------------------------------------------------------------------->
+<!--WHAT IS NODE----------------------------------------------------------------------------->
 <div id="node" class="row">
     <div class="col-md-8">
         <article class="media content-section">
             <div class="media-body">
                 <div class="article-metadata">
-                    <a class="mr-2" href="#">Node</a>
-                    <small class="text-muted"></small>
+                    <a class="mr-2" href="#">What is Node.js?</a>
+                    <small class="text-muted">Source: https://www.javabrains.io</small>
                 </div>
                 <p class="article-content">
-                    
+                    <b>What is Node.js?</b>
+                    The definition given by its creators is: "Node.js is a JavaScript runtime built on Chrome's V8 engine."
+                    We can say that the makers of Node.js took Javascript which is normally confined to a web browser and they allowed it to run on your computer (normally JavaScript runs in the browser and it can only access your web page).
                 </p>
             </div>
         </article>
     </div>
-    <div class="col-md-4">
-        <div class="content-section">
-            <h3>Examples</h3>
-            <p class="code-section">
-                <br>
-                <hr>
-        </div>
+</div>
+
+<!--HOE DOES IT WORK----------------------------------------------------------------------------->
+<div id="howdoesitwork" class="row">
+    <div class="col-md-8">
+        <article class="media content-section">
+            <div class="media-body">
+                <div class="article-metadata">
+                    <a class="mr-2" href="#">How does it work?</a>
+                    <small class="text-muted">Source: https://www.javabrains.io</small>
+                </div>
+                <p class="article-content">
+                    <b>What's a JavaScript runtime?</b>
+                    To understand this we need to understant the concepts of Language vs Runtime but firstly let's look at why was JavaScript created?
+                    It was created mainly to achieve some dynamic functionality in the browser because the web-browsers were only serving static files like HTML, CSS. 
+                </p>
+                <p>
+                    <b>How is a language created?</b>
+                    <br>
+                    Creating a new language in two easy steps:
+                    <ul>
+                        <li>design the language (figuring out the syntax)</li>
+                        <li>build something that runs it (in this case enable the browser to execute the code)</li>
+                    </ul>
+                </p>
+                <p>
+                    <b>JavaScript Engine?</b>
+                    <br>
+                    This is where the JavaScript engine comes into the picture. This runtime can't run in isolation, it needs a context. In the case of web browser that context is the DOM, which is an object who represents the page that is rendered. So the JavaScript engine has access to the DOM and when we pass a .js file to it we have access to it and we are able to modify it's elements.
+                </p>
+                <p>
+                    <b>The V8 Engine</b>
+                    <br>
+                    Different browsers have different implementations of JavaScript engines. We will discuss the Chrome Browser which has the V8 engine. 
+                    <br>
+                    So V8 has access to only one context, the DOM. But this context is fixed and we might want to have access to other processes or the file system. Node.js is able to access these things (system resources, memory, file system, I/O, network and more). 
+                </p>
+                <p>
+                    In a nutshell Node.js leverages this V8 engine to run JavaScript files in a context.
+                </p>
+            </div>
+        </article>
+    </div>
+</div>
+
+<!--WHAT IS IT USED----------------------------------------------------------------------------->
+<div id="whatitisusedfor" class="row">
+    <div class="col-md-8">
+        <article class="media content-section">
+            <div class="media-body">
+                <div class="article-metadata">
+                    <a class="mr-2" href="#">What is it used for?</a>
+                    <small class="text-muted"></small>
+                </div>
+                <p class="article-content">
+                </p>
+            </div>
+        </article>
     </div>
 </div>

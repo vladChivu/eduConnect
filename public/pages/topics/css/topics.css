@@ -48,6 +48,8 @@ a.article-title:hover {
 
 .article-content {
   white-space: pre-line;
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 .article-img {
@@ -86,4 +88,19 @@ a.article-title:hover {
 
 .code-section {
   font-family: Consolas;
+}
+
+ul li {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+p {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+ol li {
+  text-align: justify;
+  text-justify: inter-word;
 }
